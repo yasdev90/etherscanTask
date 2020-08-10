@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+}
+
+.content-container{
+    margin: 20px;
+    padding: 12px;
+    border:2px solid #ced4da;
+}

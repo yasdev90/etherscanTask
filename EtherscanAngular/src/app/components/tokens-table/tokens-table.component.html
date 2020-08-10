@@ -1,0 +1,23 @@
+<div class="col-sm-12">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>symbol</th>
+            <th>contact address</th>
+            <th>total supply</th>
+            <th>total holders</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let token of tokens; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{token.name}}</td>
+            <td>{{token.symbol}}</td>
+            <td>{{token.contractAddress}}</td>
+            <td>{{token.totalSupply}}</td>
+            <td>{{token.totalHolders}}</td>
+            <td><a class="link" (click)="editToken(token)">edit</a></td>
+        </tr>
+    </table>
+    
+</div>

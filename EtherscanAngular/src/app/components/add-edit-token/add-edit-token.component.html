@@ -1,0 +1,51 @@
+<form #tokenForm="ngForm" (submit)="onSubmit()">
+    <h5>Save / edit token</h5>
+    <input type="hidden" name="id" [(ngModel)]="token.id">
+    <div class="form-group row">
+        <div class="col-sm-5">
+            <label>Name</label>
+        </div>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" name="name" [(ngModel)]="token.name" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-5">
+            <label>symbol</label>
+        </div>
+        <div class="col-sm-7">
+            <input type="text" name="symbol" class="form-control" [(ngModel)]="token.symbol" required></div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-5">
+            <label>contact Address</label>
+        </div>
+        <div class="col-sm-7">
+            <input type="text" name="contactAddress" class="form-control" [(ngModel)]="token.contractAddress" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-5">
+            <label>total Supply</label>
+        </div>
+        <div class="col-sm-7">
+            <input type="number" name="totalSupply" class="form-control" [(ngModel)]="token.totalSupply" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-5">
+            <label>total Holders</label>
+        </div>
+        <div class="col-sm-7">
+            <input type="number" name="totalHolders" class="form-control" [(ngModel)]="token.totalHolders" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-7">
+            <input type="submit" value="submit" class="btn btn-primary" [disabled]="tokenForm.invalid"/>
+            <span class="btn-separator"></span>
+            <a (click)="reset()"  class="btn btn-info">reset</a>
+        </div>
+    </div>
+</form>

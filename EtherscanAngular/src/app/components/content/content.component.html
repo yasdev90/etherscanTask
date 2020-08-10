@@ -1,0 +1,12 @@
+<div class="content-container">
+    <div class="row">
+        <div class="col-5">
+            <app-add-edit-token [token]="modifiedToken" (addToken)="tokenOperation($event)" ></app-add-edit-token>
+        </div>
+        <div class="col-7">
+            <app-token-chart (addToken)="addToken($event)" ></app-token-chart>
+        </div>
+    </div>
+    <hr />
+    <app-tokens-table (editOldToken)="setControlsToken($event)" [tokens]="tokensList"></app-tokens-table>
+</div>
